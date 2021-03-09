@@ -15,36 +15,6 @@ w = 224
 h = 224
 
 
-# 重命名
-def rename(path):
-    class_dict = {}
-    i = 0
-    filelist = os.listdir(path)  # 该文件夹下所有的文件（包括文件夹）
-    names = []
-    num = []
-    for files in filelist:  # 遍历所有文件
-        i = i + 1
-        Olddir = os.path.join(path, files)  # 原来的文件路径
-        if os.path.isdir(Olddir):  # 如果是文件夹
-            filename = os.path.splitext(files)[0]  # 文件名
-            filetype = os.path.splitext(files)[1]  # 文件扩展名
-            Newdir = os.path.join(path, str(i) + filetype)  # 新的文件路径
-            os.rename(Olddir, Newdir)  # 重命名
-            names.append(filename)
-            num.append(i)
-            filelist2 = os.listdir(Newdir)
-            j = 0
-            for files2 in filelist2:
-                j = j + 1
-                Olddir2 = os.path.join(Newdir, files2)  # 原来的文件路径
-                filename2 = os.path.splitext(files2)[0]  # 文件名
-                filetype2 = os.path.splitext(files2)[1]  # 文件扩展名
-                Newdir2 = os.path.join(Newdir, str(j) + '_' + filetype2)  # 新的文件路径
-                os.rename(Olddir2, Newdir2)  # 重命名
-    for i, k in zip(names, num):
-        class_dict[i] = k
-    print(class_dict)
-    write_excel(class_dict)
 
 
 def write_excel(data):
@@ -191,9 +161,6 @@ def pingyi(img):
 
 if __name__ == '__main__':
     path_re = "E:/taidi/DataEnhance/bmp2jpg/"
-    # rename(path)
-    # resize(path)
-    # cate = [path_re + x for x in os.listdir(path_re) if os.path.isdir(path_re + x)]
     print('读取图像开始')
     # print(cate)
     cate = ['E:/taidi/DataEnhance/bmp2jpg/']
@@ -215,11 +182,6 @@ if __name__ == '__main__':
                 guss = gussian(img)  # 模糊
                 li = light(img)  # 光线
                 fan = fangshe(img)  # 仿射
-                # img_all.append(img)
-                # img_all.append(fan)
-                # img_all = img_all + rot + fli + li + guss
-                # img_all.append(noi)
-                # result = {'noi': noi}
                 result = {'img': img,
                           'noi': noi,
                           'fli_h': fli_h, 'fli_v': fli_v, 'fli_hv': fli_hv,
@@ -230,13 +192,13 @@ if __name__ == '__main__':
                           'fan': fan}
                 im = im.split('\\')
                 im = im[1].split('.')[0]
-                des = 'E:/taidi/DataEnhance/datadata/' + im + '/'
+                des = 'E:/taidi/DataEnhance/train/' + im + '/'
                 if not os.path.exists(des):
                     os.makedirs(des)
                 for i, key in zip(range(len(result)), result):
                     imge = cv2.resize(result[key], (224, 224))
-                    path = des + key + '_' + str(i) + '.jpg'
-                    cv2.imwrite(des + key + '_' + str(i) + '.jpg', imge)
+                    path = des + key + '.jpg'
+                    cv2.imwrite(des + str(i) + '-' + key + '.jpg', imge)
             except:
                 print(im)
             img_all = []
