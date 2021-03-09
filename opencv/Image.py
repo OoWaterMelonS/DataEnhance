@@ -50,7 +50,7 @@ def shear(im):
 
 def save(img, im, op):
     name = im.split("\\", )[1]
-    dir = 'E:/taidi/DataEnhance/res_data/'
+    dir = '/datadata/'
     name = dir + name.split(".")[0] + '_' + op + '.jpg'
     img.save(name)  # 写入图片
 

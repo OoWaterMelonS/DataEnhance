@@ -47,6 +47,18 @@ def rename(path):
     write_excel(class_dict)
 
 
+def write_excel(data):
+    workbook = xlsxwriter.Workbook(r'./label_number.xlsx')
+    worksheet = workbook.add_worksheet('sheet2')
+    worksheet.write(0, 0, 'Oldname')
+    worksheet.write(0, 1, 'Newname')
+    for k, i in zip(range(len(data)), data.keys()):
+        j = data[i]
+        worksheet.write(k + 1, 0, i)
+        worksheet.write(k + 1, 1, j)
+    workbook.close()
+
+
 # 移动
 def move(filename):
     save_path_img = r'./dele111'
@@ -89,18 +101,6 @@ def resize(path):
         class_dict_id_number[i] = j
     print(class_dict_id_number)
     write_excel(class_dict_id_number)
-
-
-def write_excel(data):
-    workbook = xlsxwriter.Workbook(r'./label_number.xlsx')
-    worksheet = workbook.add_worksheet('sheet2')
-    worksheet.write(0, 0, 'Oldname')
-    worksheet.write(0, 1, 'Newname')
-    for k, i in zip(range(len(data)), data.keys()):
-        j = data[i]
-        worksheet.write(k + 1, 0, i)
-        worksheet.write(k + 1, 1, j)
-    workbook.close()
 
 
 # 翻转
@@ -190,13 +190,13 @@ def pingyi(img):
 
 
 if __name__ == '__main__':
-    path_re = "E:/taidi/DataEnhance/data"
+    path_re = "E:/taidi/DataEnhance/bmp2jpg/"
     # rename(path)
     # resize(path)
     # cate = [path_re + x for x in os.listdir(path_re) if os.path.isdir(path_re + x)]
     print('读取图像开始')
     # print(cate)
-    cate = ['E:/taidi/DataEnhance/data']
+    cate = ['E:/taidi/DataEnhance/bmp2jpg/']
     img_all = []
     for idx, folder in enumerate(cate):
         folder1 = folder.split('/')
@@ -206,22 +206,37 @@ if __name__ == '__main__':
         for im in glob.glob(folder + '/*.jpg'):
             try:
                 img = cv2.imread(im)
-                # img = cv2.resize(img,(224,224))
+                # img = cv2.resize(img, (224, 224))
                 noi = noise(img)  # 噪声
-                fli = flip(img)  # 翻转
+                fli_h = flip(img)[0]  # 水平翻转
+                fli_v = flip(img)[1]  # 垂直翻转
+                fli_hv = flip(img)[2]  # 水平垂直翻转
                 rot = rotate(img)  # 旋转
                 guss = gussian(img)  # 模糊
                 li = light(img)  # 光线
                 fan = fangshe(img)  # 仿射
-                img_all.append(img)
-                img_all.append(fan)
-                img_all = img_all + rot + fli + li + guss
-                img_all.append(noi)
+                # img_all.append(img)
+                # img_all.append(fan)
+                # img_all = img_all + rot + fli + li + guss
+                # img_all.append(noi)
+                # result = {'noi': noi}
+                result = {'img': img,
+                          'noi': noi,
+                          'fli_h': fli_h, 'fli_v': fli_v, 'fli_hv': fli_hv,
+                          'rot_45': rot[0], 'rot_90': rot[1], 'rot_135': rot[2], 'rot_180': rot[3],
+                          'rot_225': rot[4], 'rot_275': rot[5], 'rot_320': rot[6],
+                          'guss_1': guss[0], 'guss_2': guss[1],
+                          'li_0': li[0], 'li_1': li[1],
+                          'fan': fan}
                 im = im.split('\\')
                 im = im[1].split('.')[0]
-                for k, imge in zip(range(len(img_all)), img_all):
-                    imge = cv2.resize(imge, (224, 224))
-                    cv2.imwrite(p + im + str(k) + '_.jpg', imge)
+                des = 'E:/taidi/DataEnhance/datadata/' + im + '/'
+                if not os.path.exists(des):
+                    os.makedirs(des)
+                for i, key in zip(range(len(result)), result):
+                    imge = cv2.resize(result[key], (224, 224))
+                    path = des + key + '_' + str(i) + '.jpg'
+                    cv2.imwrite(des + key + '_' + str(i) + '.jpg', imge)
             except:
                 print(im)
             img_all = []
