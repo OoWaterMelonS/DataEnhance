@@ -23,10 +23,8 @@ def moveFileToTest(path):
                 except IndexError:
                     print("list index out of range")
             return
-        elif len(files) == 12:
-            print("data had been handled already")
         else:
-            print("too many data were deleted!!!")
+            print("data had been handled already")
 
 
 def func(path):
@@ -51,9 +49,6 @@ def del_file(path):
 
 
 testDir = 'E:/taidi/DataEnhance/test/'
-# func(testDir)
 trainDir = 'E:/taidi/DataEnhance/train/'
 func(trainDir)
 
-#  对单个文件夹下面的图片进行删除
-#  遍历文件夹下面的文件夹，对每一个文件夹执行随机删除文件操作

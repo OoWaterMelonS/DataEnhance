@@ -14,7 +14,7 @@ def bmpToJpg(file_path, out_path):
 
 
 def main():
-    file_path = 'origin_data'
+    file_path = 'origin_data/classify'
     out_path = 'bmp2jpg/'
     bmpToJpg(file_path, out_path)
 

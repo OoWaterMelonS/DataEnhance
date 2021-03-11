@@ -7,6 +7,8 @@ import shutil
 import random
 import xlsxwriter
 
+from del_directory import delete_file
+
 # 批量重命名文件
 # 批量裁剪图片
 # 数据扩增
@@ -161,6 +163,8 @@ def pingyi(img):
 
 if __name__ == '__main__':
     path_re = "E:/taidi/DataEnhance/bmp2jpg/"
+
+
     print('读取图像开始')
     # print(cate)
     cate = ['E:/taidi/DataEnhance/bmp2jpg/']
@@ -198,7 +202,9 @@ if __name__ == '__main__':
                 for i, key in zip(range(len(result)), result):
                     imge = cv2.resize(result[key], (224, 224))
                     path = des + key + '.jpg'
-                    cv2.imwrite(des + str(i) + '-' + key + '.jpg', imge)
+                    temp = des + im + '~' + key + '.jpg'
+                    cv2.imwrite(temp, imge)
             except:
                 print(im)
             img_all = []
+

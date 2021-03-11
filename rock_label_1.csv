@@ -1,71 +1,70 @@
-样本编号,样本类别
-1,深灰色泥岩
-4,灰色细砂岩
-6,浅灰色细砂岩
-12,深灰色粉砂质泥岩
-17,灰色泥质粉砂岩
-20,深灰色泥岩
-23,灰色细砂岩
-35,灰色细砂岩
-37,灰色泥质粉砂岩
-38,深灰色泥岩
-40,灰黑色泥岩
-44,灰色泥质粉砂岩
-50,浅灰色细砂岩
-52,深灰色泥岩
-53,灰黑色泥岩
-62,深灰色粉砂质泥岩
-64,灰色泥质粉砂岩
-71,浅灰色细砂岩
-87,深灰色粉砂质泥岩
-89,深灰色泥岩
-94,灰色泥质粉砂岩
-99,深灰色泥岩
-100,浅灰色细砂岩
-103,深灰色泥岩
-113,浅灰色细砂岩
-122,灰色细砂岩
-123,灰黑色泥岩
-124,浅灰色细砂岩
-126,深灰色泥岩
-133,浅灰色细砂岩
-137,深灰色粉砂质泥岩
-143,浅灰色细砂岩
-144,灰黑色泥岩
-146,深灰色泥岩
-153,深灰色粉砂质泥岩
-154,深灰色泥岩
-155,深灰色粉砂质泥岩
-162,浅灰色细砂岩
-169,浅灰色细砂岩
-179,灰黑色泥岩
-189,灰色泥质粉砂岩
-197,灰黑色泥岩
-199,黑色煤
-204,灰黑色泥岩
-207,黑色煤
-210,浅灰色细砂岩
-223,深灰色泥岩
-226,浅灰色细砂岩
-234,灰色泥质粉砂岩
-240,浅灰色细砂岩
-247,浅灰色细砂岩
-250,灰色泥质粉砂岩
-261,深灰色粉砂质泥岩
-262,黑色煤
-266,灰色泥质粉砂岩
-269,深灰色泥岩
-271,深灰色泥岩
-272,浅灰色细砂岩
-277,深灰色粉砂质泥岩
-287,浅灰色细砂岩
-298,深灰色泥岩
-299,黑色煤
-315,深灰色粉砂质泥岩
-322,深灰色泥岩
-323,浅灰色细砂岩
-324,深灰色泥岩
-326,黑色煤
-329,浅灰色细砂岩
-341,深灰色泥岩
-350,浅灰色细砂岩
+1,深灰色泥岩,Dark gray mudstone
+4,灰色细砂岩,Grey fine sandstone
+6,浅灰色细砂岩,Light gray fine sandstone
+12,深灰色粉砂质泥岩,Dark gray silty mudstone
+17,灰色泥质粉砂岩,Grey argillaceous siltstone
+20,深灰色泥岩,Dark gray mudstone
+23,灰色细砂岩,Grey fine sandstone
+35,灰色细砂岩,Grey fine sandstone
+37,灰色泥质粉砂岩,Grey argillaceous siltstone
+38,深灰色泥岩,Dark gray mudstone
+40,灰黑色泥岩,Gray-black mudstone
+44,灰色泥质粉砂岩,Grey argillaceous siltstone
+50,浅灰色细砂岩,Light gray fine sandstone
+52,深灰色泥岩,Dark gray mudstone
+53,灰黑色泥岩,Gray-black mudstone
+62,深灰色粉砂质泥岩,Dark gray silty mudstone
+64,灰色泥质粉砂岩,Grey argillaceous siltstone
+71,浅灰色细砂岩,Light gray fine sandstone
+87,深灰色粉砂质泥岩,Dark gray silty mudstone
+89,深灰色泥岩,Dark gray mudstone
+94,灰色泥质粉砂岩,Grey argillaceous siltstone
+99,深灰色泥岩,Dark gray mudstone
+100,浅灰色细砂岩,Light gray fine sandstone
+103,深灰色泥岩,Dark gray mudstone
+113,浅灰色细砂岩,Light gray fine sandstone
+122,灰色细砂岩,Grey fine sandstone
+123,灰黑色泥岩,Gray-black mudstone
+124,浅灰色细砂岩,Light gray fine sandstone
+126,深灰色泥岩,Dark gray mudstone
+133,浅灰色细砂岩,Light gray fine sandstone
+137,深灰色粉砂质泥岩,Dark gray silty mudstone
+143,浅灰色细砂岩,Light gray fine sandstone
+144,灰黑色泥岩,Gray-black mudstone
+146,深灰色泥岩,Dark gray mudstone
+153,深灰色粉砂质泥岩,Dark gray silty mudstone
+154,深灰色泥岩,Dark gray mudstone
+155,深灰色粉砂质泥岩,Dark gray silty mudstone
+162,浅灰色细砂岩,Light gray fine sandstone
+169,浅灰色细砂岩,Light gray fine sandstone
+179,灰黑色泥岩,Gray-black mudstone
+189,灰色泥质粉砂岩,Grey argillaceous siltstone
+197,灰黑色泥岩,Gray-black mudstone
+199,黑色煤,Black coal
+204,灰黑色泥岩,Gray-black mudstone
+207,黑色煤,Black coal
+210,浅灰色细砂岩,Light gray fine sandstone
+223,深灰色泥岩,Dark gray mudstone
+226,浅灰色细砂岩,Light gray fine sandstone
+234,灰色泥质粉砂岩,Grey argillaceous siltstone
+240,浅灰色细砂岩,Light gray fine sandstone
+247,浅灰色细砂岩,Light gray fine sandstone
+250,灰色泥质粉砂岩,Grey argillaceous siltstone
+261,深灰色粉砂质泥岩,Dark gray silty mudstone
+262,黑色煤,Black coal
+266,灰色泥质粉砂岩,Grey argillaceous siltstone
+269,深灰色泥岩,Dark gray mudstone
+271,深灰色泥岩,Dark gray mudstone
+272,浅灰色细砂岩,Light gray fine sandstone
+277,深灰色粉砂质泥岩,Dark gray silty mudstone
+287,浅灰色细砂岩,Light gray fine sandstone
+298,深灰色泥岩,Dark gray mudstone
+299,黑色煤,Black coal
+315,深灰色粉砂质泥岩,Dark gray silty mudstone
+322,深灰色泥岩,Dark gray mudstone
+323,浅灰色细砂岩,Light gray fine sandstone
+324,深灰色泥岩,Dark gray mudstone
+326,黑色煤,Black coal
+329,浅灰色细砂岩,Light gray fine sandstone
+341,深灰色泥岩,Dark gray mudstone
+350,浅灰色细砂岩,Light gray fine sandstone
